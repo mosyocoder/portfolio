@@ -1,12 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 
 import "./style.css";
 import avatar from "../../assets/enes_avatar.jpg";
 
 function Navigation() {
+	const [toggle, setToggle] = useState(false);
+
+	const toggleButton = () => {
+		setToggle(!toggle);
+		if (toggle) document.body.classList.add("asd");
+		else document.body.classList.remove("asd");
+	};
+
 	return (
 		<div>
-			<div className="header">
+			<button className="mobile-nav-toggle" onClick={() => toggleButton()}>
+				<i className={toggle ? "fa-solid fa-bars" : "fa-solid fa-xmark"}></i>
+			</button>
+			<div className={`header ${toggle}`}>
 				<div>
 					<img src={avatar} alt="" />
 					<h1>Enes Seval</h1>
@@ -54,6 +65,7 @@ function Navigation() {
 					</ul>
 				</div>
 			</div>
+			<div style={{ height: "100vh" }}></div>
 			<div className="footer">
 				<div class="container">
 					<div class="copyright">
