@@ -1,4 +1,4 @@
-.asd{
+.ovfhidden{
         overflow: hidden;
 }
 
@@ -10,11 +10,13 @@
     width: 300px;
     padding: 0 15px;
     background: #040B14;
+    transition: all 1s;
+    z-index: 9997;
 }
 
 .true{
     @media (max-width:1199px){
-        left: -300px;
+        left: -360px;
     }
 }
 
