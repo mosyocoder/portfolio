@@ -23,7 +23,7 @@ section{
     }
 
     @media(min-width:576px){
-        max-width: 540px;
+        max-width: 576px;
     }
 }
 
@@ -50,3 +50,19 @@ section{
     left: 0;
     background: #373535;
 }
+
+@keyframes customScroll {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Animasyonu uygula */
+  .scroll-animation {
+    animation: customScroll .5s ease-out;
+  }

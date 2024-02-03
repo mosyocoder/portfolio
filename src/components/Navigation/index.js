@@ -2,10 +2,6 @@ import React, { useState } from "react";
 
 import "./style.css";
 import avatar from "../../assets/enes_avatar.jpg";
-import Hero from "../Hero";
-import About from "../About";
-import Portfolio from "../Portfolio";
-import Contact from "../Contact";
 
 function Navigation() {
 	const [toggle, setToggle] = useState(true);
@@ -27,9 +23,21 @@ function Navigation() {
 			let top = sections[i].offsetTop;
 			let bottom = sections[i].offsetTop + sections[i].offsetHeight;
 
-			if (cur_pos >= top && cur_pos <= bottom) setActiveNav(i);
+			if (cur_pos >= top && cur_pos <= bottom) {
+				setActiveNav(i);
+			}
 		}
 	});
+
+	const handleNavClick = (ix) => {
+		if (!toggle) setToggle(!toggle);
+
+		window.scroll({
+			top: sections[ix].offsetTop,
+			left: -1,
+			behavior: "smooth",
+		});
+	};
 
 	return (
 		<div>
@@ -58,47 +66,30 @@ function Navigation() {
 				<div className="nav-menu">
 					<ul>
 						<li>
-							<a href="/" className={activeNav === 0 ? "active" : ""}>
+							<a href="#home" onClick={() => handleNavClick(0)} className={activeNav === 0 ? "active" : ""}>
 								<i className="fa-solid fa-house fa-2x"></i>
 								<span>Home</span>
 							</a>
 						</li>
 						<li>
-							<a href="/" className={activeNav === 1 ? "active" : ""}>
+							<a href="#about" onClick={() => handleNavClick(1)} className={activeNav === 1 ? "active" : ""}>
 								<i className="fa-solid fa-user fa-2x"></i>
 								<span>About</span>
 							</a>
 						</li>
 						<li>
-							<a href="/" className={activeNav === 2 ? "active" : ""}>
+							<a href="#portfolio" onClick={() => handleNavClick(2)} className={activeNav === 2 ? "active" : ""}>
 								<i className="fa-solid fa-file-code fa-2x"></i>
 								<span>Portfolio</span>
 							</a>
 						</li>
 						<li>
-							<a href="/" className={activeNav === 3 ? "active" : ""}>
+							<a href="#contact" onClick={() => handleNavClick(3)} className={activeNav === 3 ? "active" : ""}>
 								<i className="fa-solid fa-envelope fa-2x"></i>
 								<span>Contact</span>
 							</a>
 						</li>
 					</ul>
-				</div>
-			</div>
-			<Hero />
-			<About />
-			<Portfolio />
-			<Contact />
-			<div className="footer">
-				<div className="container">
-					<div className="copyright">
-						&copy; Copyright{" "}
-						<strong>
-							<span>Mösyö Coder</span>
-						</strong>
-					</div>
-					<div className="credits">
-						Designed by <a href="/">Mösyö Coder</a>
-					</div>
 				</div>
 			</div>
 		</div>
