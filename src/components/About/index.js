@@ -4,7 +4,7 @@ import "./style.css";
 
 function About() {
 	return (
-		<section className="about">
+		<section className="about" data-aos="slide-right">
 			<div className="container">
 				<div className="section-title">
 					<h2>About</h2>

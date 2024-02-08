@@ -1,7 +1,7 @@
 import React from "react";
+import { TypeAnimation } from "react-type-animation";
 
 import "./style.css";
-import { TypeAnimation } from "react-type-animation";
 
 function Hero() {
 	return (

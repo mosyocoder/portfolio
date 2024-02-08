@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 section{
     padding: 60px 0;
     overflow: hidden;
@@ -23,7 +27,7 @@ section{
     }
 
     @media(min-width:576px){
-        max-width: 576px;
+        max-width: 570px;
     }
 }
 

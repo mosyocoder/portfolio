@@ -2,7 +2,7 @@ import React from "react";
 
 function Portfolio() {
 	return (
-		<section className="portfolio">
+		<section className="portfolio" data-aos="slide-right">
 			<div className="container">
 				<div className="section-title">
 					<h2>Portfolio</h2>

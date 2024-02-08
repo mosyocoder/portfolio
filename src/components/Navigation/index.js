@@ -31,12 +31,42 @@ function Navigation() {
 
 	const handleNavClick = (ix) => {
 		if (!toggle) setToggle(!toggle);
+		const start = window.pageYOffset;
+		const end = sections[ix].offsetTop;
+		const distance = end - start;
+		const duration = 1500; // Animasyon süresi (ms)
 
-		window.scroll({
-			top: sections[ix].offsetTop,
-			left: -1,
-			behavior: "smooth",
-		});
+		let startTime = null;
+
+		const easeInOutExpo = (t, b, c, d) => {
+			t /= d / 2;
+			if (t < 1) return (c / 2) * Math.pow(2, 10 * (t - 1)) + b;
+			t--;
+			return (c / 2) * (-Math.pow(2, -10 * t) + 2) + b;
+		};
+
+		const anim = (currentTime) => {
+			if (startTime === null) startTime = currentTime;
+			const timeEllapsed = currentTime - startTime;
+			const run = easeInOutExpo(timeEllapsed, start, distance, duration);
+			window.scroll(0, run);
+			if (timeEllapsed < duration) requestAnimationFrame(anim);
+		};
+
+		// if ("scroll-behavior" in document.documentElement.style) {
+		// 	window.scrollTo({
+		// 		top: end,
+		// 		behavior: "smooth",
+		// 	});
+		// } else {
+		// 	requestAnimationFrame(anim);
+		// }
+
+		window.requestAnimationFrame(anim);
+		// window.scroll({
+		// 	top: sections[ix].offsetTop,
+		// 	behavior: "smooth",
+		// });
 	};
 
 	return (
