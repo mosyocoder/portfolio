@@ -2,31 +2,53 @@
     box-sizing: border-box;
 }
 
+main{
+    margin-left: 300px;
+}
+
+@media (max-width:1199px){
+    main{
+        margin-left: 0;
+    }
+}
+
 section{
-    padding: 60px 0;
+    padding: 60px 60px;
     overflow: hidden;
+    background-color: #e5e5e5;
+    color: #091935;
+    font-weight: 600;
 }
 
 .container{
     width: 100%;
+    min-height: 100vh;
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+}
 
-    @media(min-width:1200px){
+@media(max-width:1200px){
+    .container{
         max-width: 1140px;
     }
+}
 
-    @media(min-width:992px){
+@media(max-width:992px){
+    .container{
         max-width: 960px;
     }
+}
 
-    @media(min-width:768px){
+@media(max-width:768px){
+    .container{
         max-width: 720px;
     }
+}
 
-    @media(min-width:576px){
+@media(max-width:576px){
+    .container{
         max-width: 570px;
     }
 }
@@ -41,7 +63,7 @@ section{
     margin-bottom: 20px;
     padding-bottom: 20px;
     position: relative;
-    color: #373535;
+    color: #091935;
 }
 
 .section-title h2::after{
@@ -52,21 +74,5 @@ section{
     height: 3px;
     bottom: 0;
     left: 0;
-    background: #373535;
+    background: #091935;
 }
-
-@keyframes customScroll {
-    from {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  /* Animasyonu uygula */
-  .scroll-animation {
-    animation: customScroll .5s ease-out;
-  }

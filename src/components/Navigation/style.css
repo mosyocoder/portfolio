@@ -9,7 +9,7 @@
     left: 0;
     width: 300px;
     padding: 0 15px;
-    background: #040B14;
+    background: #091935;
     transition: all 1s;
     z-index: 9997;
     overflow-y: auto;
@@ -28,7 +28,7 @@
     margin: 15px auto;
     display: block;
     width: 160px;
-    border: 8px solid #1d232b;
+    border: 8px solid #3a4962;
 }
 
 .header h1{
@@ -46,8 +46,8 @@
 .social-links a{
     font-size: 18px;
     display: inline-block;
-    background-color: #6D696A;
-    color: #DAE2DF;
+    background-color: #3a4962;
+    color: #fff;
     line-height: 1;
     padding: 8px 0;
     margin-right: 10px;
@@ -58,7 +58,7 @@
 }
 
 .social-links a:hover{
-    background-color: #373535;
+    background-color: #071329;
     color: #DAE2DF;
     text-decoration: none;
 }
@@ -85,7 +85,7 @@
 .nav-menu a{
     display: flex;
     align-items: center;
-    color: #6D696A;
+    color: #666;
     padding: 12px 15px;
     margin-bottom: 8px;
     transition: .3s;
@@ -105,7 +105,7 @@
 }
 
 .nav-menu a:hover{
-    color: #373535;
+    color: #fff;
 }
 
 .nav-menu .active{

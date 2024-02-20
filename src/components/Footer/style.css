@@ -1,6 +1,6 @@
 .footer {
     padding: 15px;
-    color: #373535;
+    color: #fff;
     font-size: 16px;
     font-weight: bold;
     position: fixed;
@@ -8,7 +8,7 @@
     bottom: 0;
     width: 300px;
     z-index: 9999;
-    background: #040B14;
+    background: #091935;
     font-family: "Poppins";
 
     @media(max-width:1199px){
@@ -25,16 +25,15 @@
     padding-top: 5px;
     text-align: center;
     font-size: 15px;
-    color: #373535;
+    color: #666;
 }
 
 .footer .credits a{
-    color: #373535;
+    color: #666;
     text-decoration: none;
     transition: .3s;
 }
 
 .footer .credits a:hover{
-    color: #6D696A;
     text-decoration: underline;
 }

@@ -14,7 +14,7 @@
     }
 }
 
-.hero::before{
+/* .hero::before{
     content: "";
     background: rgba(5, 13, 24, .3);
     position: absolute;
@@ -23,7 +23,7 @@
     left: 0;
     right: 0;
     z-index: 2;
-}
+} */
 
 .hero .hero-container{
     position: relative;

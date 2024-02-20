@@ -31,6 +31,8 @@ function Navigation() {
 
 	const handleNavClick = (ix) => {
 		if (!toggle) setToggle(!toggle);
+        if (toggle) document.body.classList.add("ovfhidden");
+		else document.body.classList.remove("ovfhidden");
 		const start = window.pageYOffset;
 		const end = sections[ix].offsetTop;
 		const distance = end - start;
@@ -53,20 +55,7 @@ function Navigation() {
 			if (timeEllapsed < duration) requestAnimationFrame(anim);
 		};
 
-		// if ("scroll-behavior" in document.documentElement.style) {
-		// 	window.scrollTo({
-		// 		top: end,
-		// 		behavior: "smooth",
-		// 	});
-		// } else {
-		// 	requestAnimationFrame(anim);
-		// }
-
 		window.requestAnimationFrame(anim);
-		// window.scroll({
-		// 	top: sections[ix].offsetTop,
-		// 	behavior: "smooth",
-		// });
 	};
 
 	return (

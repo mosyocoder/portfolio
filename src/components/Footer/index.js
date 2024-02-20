@@ -5,7 +5,7 @@ import "./style.css";
 function Footer() {
 	return (
 		<div className="footer">
-			<div className="container">
+			<div className="fcont">
 				<div className="copyright">
 					&copy; Copyright{" "}
 					<strong>

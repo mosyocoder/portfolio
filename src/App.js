@@ -22,11 +22,13 @@ function App() {
 	return (
 		<div>
 			<Navigation />
-			<Hero />
-			<About />
-			<Portfolio />
-			<Contact />
-			<Footer />
+			<main>
+				<Hero />
+				<About />
+				<Portfolio />
+				<Contact />
+				<Footer />
+			</main>
 		</div>
 	);
 }
