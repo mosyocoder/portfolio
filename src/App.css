@@ -45,6 +45,10 @@ section{
     .container{
         max-width: 720px;
     }
+
+    section{
+        padding: 30px 30px;
+    }
 }
 
 @media(max-width:576px){
