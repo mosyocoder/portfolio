@@ -17,10 +17,10 @@ function Portfolio() {
 				{isHovered && (
 					<div className="overlay">
 						<a href={sourceCodeLink} rel="noreferrer" className="source-code" target="_blank">
-							Kaynak Kodu
+							Github
 						</a>
 						<a href={liveLink} rel="noreferrer" className="live-link" target="_blank">
-							Canlı Link
+							Netlify
 						</a>
 					</div>
 				)}
@@ -34,12 +34,12 @@ function Portfolio() {
 					<h2>Portfolio</h2>
 				</div>
 				<div className="content">
-					<Card imgSrc={bmi} sourceCodeLink="#" liveLink="#" />
-					<Card imgSrc={anonymous} sourceCodeLink="#" liveLink="#" />
-					<Card imgSrc={ecom} sourceCodeLink="#" liveLink="#" />
-					<Card imgSrc={notes} sourceCodeLink="#" liveLink="#" />
-					<Card imgSrc={vote} sourceCodeLink="#" liveLink="#" />
-					<Card imgSrc={weather} sourceCodeLink="#" liveLink="#" />
+					<Card imgSrc={bmi} sourceCodeLink="https://github.com/mosyocoder/body-mass-index" liveLink="https://mosyocoder-bmi-app.netlify.app/" />
+					<Card imgSrc={anonymous} sourceCodeLink="https://github.com/mosyocoder/anonymous-chat-app" liveLink="https://mosyocoder-chat-app.netlify.app/" />
+					<Card imgSrc={ecom} sourceCodeLink="https://github.com/mosyocoder/e-commerce" liveLink="https://mosyocoder-ecommerce.netlify.app/" />
+					<Card imgSrc={notes} sourceCodeLink="https://github.com/mosyocoder/note-app" liveLink="https://mosyocoder-noteapp.netlify.app" />
+					<Card imgSrc={vote} sourceCodeLink="https://github.com/mosyocoder/voting-app" liveLink="https://mosyocoder-vote-app.netlify.app/" />
+					<Card imgSrc={weather} sourceCodeLink="https://github.com/mosyocoder/react-weather-ap" liveLink="https://mosyocoder-weatherapp.netlify.app/" />
 				</div>
 			</div>
 		</section>
