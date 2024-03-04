@@ -31,7 +31,7 @@ function Navigation() {
 
 	const handleNavClick = (ix) => {
 		if (!toggle) setToggle(!toggle);
-        if (toggle) document.body.classList.add("ovfhidden");
+		if (toggle && window.innerWidth < 1199) document.body.classList.add("ovfhidden");
 		else document.body.classList.remove("ovfhidden");
 		const start = window.pageYOffset;
 		const end = sections[ix].offsetTop;
@@ -59,7 +59,7 @@ function Navigation() {
 	};
 
 	return (
-		<div>
+		<div id="nav">
 			<button className="mobile-nav-toggle" onClick={() => toggleButton()}>
 				<i className={toggle ? "fa-solid fa-bars" : "fa-solid fa-xmark"}></i>
 			</button>
